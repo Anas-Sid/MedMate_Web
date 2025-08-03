@@ -1,3 +1,5 @@
+import Logo from '../assets/Logo.svg';
+
 import {Settings ,ClockPlus,MessageSquareMore , Calendar ,LayoutDashboard, Users, CalendarDays, LogOut } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
@@ -5,7 +7,10 @@ export default function Sidebar() {
   return (
     <div className="w-20 bg-[#3E36B0] text-white flex flex-col items-center py-6 space-y-8 min-h-screen rounded-l-4xl ">
       {/* Logo */}
-      <div className="text-2xl font-bold">🩺</div>
+      
+          <img src={Logo} alt="MedMate Logo" className="h-15 w-auto cursor-pointer  rotate-90" />
+        
+
 
       {/* Navigation Icons */}
       <div className="flex flex-col space-y-12 text-white text-center mt-[50px]">
@@ -15,7 +20,9 @@ export default function Sidebar() {
         <Link to="/availibilty">
         <Calendar className="w-6 h-6 hover:text-blue-300 cursor-pointer" />
         </Link>
-        <MessageSquareMore className="w-6 h-6 hover:text-blue-300 cursor-pointer" />
+        <Link to="/doctor/chat">
+          <MessageSquareMore className="w-6 h-6 hover:text-blue-300 cursor-pointer" />
+        </Link>
         <ClockPlus className="w-6 h-6 hover:text-blue-300 cursor-pointer" />
         <Settings className="w-6 h-6 hover:text-blue-300 cursor-pointer" />
         <Link to="/">

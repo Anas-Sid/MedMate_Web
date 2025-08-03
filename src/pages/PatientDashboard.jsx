@@ -8,7 +8,9 @@ import UpcomingAppointment from '../components/patientdashboradcomponent/Upcomin
 import DoctorBookingCard from '../components/patientdashboradcomponent/DoctorBookingCard';
 import { useNavigate } from 'react-router-dom';
 
+
 export default function PatientDashboard() {
+  
   const navigate = useNavigate();
 
   const handleDoctorClick = (doctor) => {
@@ -40,6 +42,7 @@ export default function PatientDashboard() {
       <YourAppointmentsBanner />
       <DoctorList doctors={recommendedDoctors} onDoctorClick={handleDoctorClick} />
        <UpcomingAppointment />
+       
      
      </div>
     </div>

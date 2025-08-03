@@ -60,3 +60,17 @@ exports.loginPatient = async (req, res) => {
     res.status(500).json({ message: 'Server error' });
   }
 };
+
+
+// ✅ Get all patients (without password)
+
+
+exports.getAllPatients = async (req, res) => {
+  try {
+    const patients = await Patient.find().select('-password'); // exclude password
+    res.status(200).json(patients);
+  } catch (err) {
+    console.error('Error fetching patients:', err);
+    res.status(500).json({ message: 'Server error' });
+  }
+};

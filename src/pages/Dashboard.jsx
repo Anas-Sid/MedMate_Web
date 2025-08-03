@@ -5,7 +5,9 @@ import { GreetingBanner } from '../components/GreetingBanner';
 import { VisitCalendarCards } from '../components/VisitCalendarCards';
 import { PatientConsultNews } from '../components/PatientConsultNews';
 
+
 export default function Dashboard() {
+  
   const [patients, setPatients] = useState([]);
   const [visitCount, setVisitCount] = useState(0); // You can update this dynamically if needed
 
@@ -36,6 +38,7 @@ export default function Dashboard() {
           <GreetingBanner doctorName={doctorName} />
           <VisitCalendarCards visitCount={visitCount} />
           <PatientConsultNews patients={patients} />
+         
         </div>
       </div>
     </div>

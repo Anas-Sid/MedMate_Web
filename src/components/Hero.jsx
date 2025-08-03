@@ -1,8 +1,8 @@
 export default function Hero() {
   return (
-    <section id="home" className="flex flex-col md:flex-row items-center justify-between px-6 py-20 max-w-7xl mx-auto">
+    <section id="home" className="flex flex-col md:flex-row items-center justify-between py-10 px-6 md:py-20 max-w-7xl mx-auto">
       <div className="md:w-1/2 mb-10 md:mb-0 animate-fadeInUp">
-        <h1 className="text-5xl font-bold text-gray-800 mb-4">Bringing Healthcare to Your Fingertips</h1>
+        <h1 className="text-4xl md:text-5xl font-bold text-gray-800 mb-4">Bringing Healthcare to Your Fingertips</h1>
         <p className="text-lg text-gray-600 mb-6">Connect with trusted doctors online — fast, easy, and secure.</p>
       </div>
       <div className="md:w-1/2 animate-fadeIn">

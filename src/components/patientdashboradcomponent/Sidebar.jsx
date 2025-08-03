@@ -1,12 +1,12 @@
 // components/patientdashboardcomponent/RightSidebar.jsx
 import { Home, CalendarDays, MessageCircle, PieChart, Settings, LogOut, User } from 'lucide-react';
 import { Link } from 'react-router-dom';
-
+import Logo from '../../assets/Logo.svg';
 export default function RightSidebar() {
   return (
     <div className="fixed right-0 top-0 h-full w-16 bg-gradient-to-r from-[#B4C1FF] via-[#8097E9] to-[#3E36B0] shadow-md flex flex-col items-center pt-6 rounded-4xl z-50    ">
       <div className="mb-6">
-        <User className="w-8 h-8 text-black" />
+       <img src={Logo} alt="MedMate Logo" className="h-10 w-auto cursor-pointer  rotate-90" />
       </div>
       <div className="flex flex-col gap-6 mt-[50px]">
         <Link to="/patient">
@@ -16,7 +16,9 @@ export default function RightSidebar() {
         <SidebarIcon icon={<CalendarDays />} />
         </Link>
         
-        <SidebarIcon icon={<MessageCircle />} />
+        <Link to="/patient/chat">
+          <SidebarIcon icon={<MessageCircle />} />
+        </Link>
         <SidebarIcon icon={<PieChart />} />
         <SidebarIcon icon={<Settings />} />
       </div>

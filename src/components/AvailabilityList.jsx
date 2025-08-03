@@ -2,8 +2,8 @@ import React, { useEffect, useState } from 'react';
 
 export default function AvailabilityList({ refreshTrigger }) {
   useEffect(() => {
-  fetchAvailability();
-}, [refreshTrigger]); // Now will run again when refreshTrigger changes
+    fetchAvailability();
+  }, [refreshTrigger]); // Now will run again when refreshTrigger changes
 
   const [availability, setAvailability] = useState([]);
   const [editingItem, setEditingItem] = useState(null);
@@ -19,44 +19,44 @@ export default function AvailabilityList({ refreshTrigger }) {
   }, []);
 
   const fetchAvailability = async () => {
-  const doctor = JSON.parse(localStorage.getItem('doctor'));
-  if (!doctor?.id) return;
+    const doctor = JSON.parse(localStorage.getItem('doctor'));
+    if (!doctor?.id) return;
 
-  try {
-    const response = await fetch(
-      `http://localhost:5000/api/availability?doctorId=${doctor.id}`
-    );
-    const data = await response.json();
+    try {
+      const response = await fetch(
+        `http://localhost:5000/api/availability?doctorId=${doctor.id}`
+      );
+      const data = await response.json();
 
-    const today = new Date();
-    const upcoming = [];
-    const expired = [];
+      const today = new Date();
+      const upcoming = [];
+      const expired = [];
 
-    data.forEach((item) => {
-      const availabilityDate = new Date(item.date);
-      if (availabilityDate >= today) {
-        upcoming.push(item);
-      } else {
-        expired.push(item._id);
+      data.forEach((item) => {
+        const availabilityDate = new Date(item.date);
+        if (availabilityDate >= today) {
+          upcoming.push(item);
+        } else {
+          expired.push(item._id);
+        }
+      });
+
+      // Auto-delete expired
+      for (const id of expired) {
+        try {
+          await fetch(`http://localhost:5000/api/availability/${id}`, {
+            method: 'DELETE',
+          });
+        } catch {
+          console.warn(`Failed to auto-delete expired availability ${id}`);
+        }
       }
-    });
 
-    // Auto-delete expired
-    for (const id of expired) {
-      try {
-        await fetch(`http://localhost:5000/api/availability/${id}`, {
-          method: 'DELETE',
-        });
-      } catch  {
-        console.warn(`Failed to auto-delete expired availability ${id}`);
-      }
+      setAvailability(upcoming);
+    } catch (error) {
+      console.error('Error fetching availability:', error);
     }
-
-    setAvailability(upcoming);
-  } catch (error) {
-    console.error('Error fetching availability:', error);
-  }
-};
+  };
 
 
   const handleDelete = async (id) => {

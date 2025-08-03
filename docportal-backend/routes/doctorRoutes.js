@@ -10,6 +10,7 @@ const {
 
 router.post('/signup', signupDoctor);
 router.post('/login', loginDoctor);
+
 router.get('/all', getAllDoctors); // ✅ cleaner and direct
 
 module.exports = router;
