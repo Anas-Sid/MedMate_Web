@@ -1,17 +1,53 @@
-<<<<<<< HEAD
-# React + Vite
+<h1 align="center">🩺 MedMate – Doctor-Patient Portal</h1>
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+<p align="center">
+A full-featured medical web portal where patients can book appointments, doctors can manage availability, and both can communicate through real-time chat.
+</p>
 
-Currently, two official plugins are available:
+<p align="center">
+  <img src="https://img.shields.io/github/languages/top/Anas-Sid/MedMate_Web?style=for-the-badge" />
+  <img src="https://img.shields.io/github/last-commit/Anas-Sid/MedMate_Web?style=for-the-badge" />
+  <img src="https://img.shields.io/github/issues/Anas-Sid/MedMate_Web?style=for-the-badge" />
+</p>
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+## 🚀 Live Demo
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
-=======
-# MedMate_Web
-Its a Website where patient  can book appointment and doctor can share his availability to the patient and its completely on MERN stack 
->>>>>>> 3e3430114844c0aa5c8f2bf2517d0a6b9f7e776a
+🌐 [Live Demo Link](https://your-medmate-demo.vercel.app)  
+> _Replace with your actual deployed link (Vercel, Netlify, etc.)_
+
+---
+
+## ✨ Features
+
+- 🩺 **Doctor & Patient Authentication** (JWT-based)
+- 📅 **Doctor Availability Management**
+- 📆 **Appointment Booking System**
+- 💬 **Real-time Chat** (WhatsApp-style interface)
+- 👤 **Role-based Dashboards** for Doctors & Patients
+- 📈 **Visit Statistics & Patient Records**
+- 🔒 **Secure Login & Token Handling**
+
+---
+
+## 📸 Screenshots
+
+> Add screenshots in `/assets` folder and reference them here like this:
+
+| Patient Dashboard | Doctor Chat |
+|------------------|--------------|
+| ![Patient](./assets/patient-dashboard.png) | ![Doctor Chat](./assets/doctor-chat.png) |
+
+---
+
+## 🛠️ Tech Stack
+
+<p align="center">
+  <img src="https://skillicons.dev/icons?i=html,css,js,react,tailwind,nodejs,express,mongodb,firebase,graphql,redux,git,github,postman,socket" />
+</p>
+
+---
+
+## 📦 Folder Structure (MERN Stack)
+
