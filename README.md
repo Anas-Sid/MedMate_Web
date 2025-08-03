@@ -12,12 +12,7 @@ A full-featured medical web portal where patients can book appointments, doctors
 
 ---
 
-## 🚀 Live Demo
 
-🌐 [Live Demo Link](https://your-medmate-demo.vercel.app)  
-> _Replace with your actual deployed link (Vercel, Netlify, etc.)_
-
----
 
 ## ✨ Features
 
@@ -31,15 +26,7 @@ A full-featured medical web portal where patients can book appointments, doctors
 
 ---
 
-## 📸 Screenshots
 
-> Add screenshots in `/assets` folder and reference them here like this:
-
-| Patient Dashboard | Doctor Chat |
-|------------------|--------------|
-| ![Patient](./assets/patient-dashboard.png) | ![Doctor Chat](./assets/doctor-chat.png) |
-
----
 
 ## 🛠️ Tech Stack
 
